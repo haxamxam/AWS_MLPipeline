@@ -2,6 +2,16 @@
 
 XGBoost Machine Learning pipeline 
 
+## Using AWS SageMaker XGBoost
+
+With SageMaker, you can use XGBoost as a built-in algorithm or framework. By using XGBoost as a framework, you have more flexibility and access to more advanced scenarios, such as cross-validation, because you can customize your own training scripts.
+
+This pipeline uses XGBoost as a framework since we are using our own training script.
+
+*Please Note: Python SDK v1 has been used to create the pipeline.
+
+[Sagemaker Python SDK v1]
+
 
 ```
 import boto3
