@@ -23,14 +23,13 @@ estimator = XGBoost(entry_point = "your_xgboost_abalone_script.py",
                     hyperparameters=hyperparameters,
                     role=sagemaker.get_execution_role(),
                     train_instance_count=1,
-                    train_instance_type='ml.m5.2xlarge',
+                    train_instance_type='ml.m5.2xlarge', #this can also be a local instance
                     output_path=output_path)
 
 # define the data type and paths to the training and validation datasets
-content_type = "libsvm"
+content_type = "text/csv'"
 train_input = s3_input("s3://{}/{}/{}/".format(bucket, prefix, 'train'), content_type=content_type)
-validation_input = s3_input("s3://{}/{}/{}/".format(bucket, prefix, 'validation'), content_type=content_type)
 
 # execute the XGBoost training job
-estimator.fit({'train': train_input, 'validation': validation_input})
+estimator.fit({'train': train_input})
 ```
