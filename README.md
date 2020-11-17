@@ -1,6 +1,6 @@
 # AWS MACHINE LEARNING PIPELINE
 
-XGBoost Machine Learning pipeline 
+XGBoost Machine Learning pipeline using AWS S3 buckets and AWS Sagemaker. 
 
 ## Using AWS SageMaker XGBoost
 
