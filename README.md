@@ -8,9 +8,9 @@ With SageMaker, you can use XGBoost as a built-in algorithm or framework. By usi
 
 This pipeline uses XGBoost as a framework since we are using our own training script.
 
-*Please Note: Python SDK v1 has been used to create the pipeline.
+*Please Note: Python SDK v1 has been used to create the pipeline.*
 
-[Sagemaker Python SDK v1]
+<strong>[Sagemaker Python SDK v1]</strong>
 
 
 ```
@@ -30,7 +30,6 @@ output_path = 's3://{}/{}/{}/output'.format(bucket, prefix, 'yoursample-xgb-fram
 # specify the entry_point to your xgboost training script
 estimator = XGBoost(entry_point = "your_xgboost_abalone_script.py", 
                     framework_version='1.2-1',
-                    hyperparameters=hyperparameters,
                     role=sagemaker.get_execution_role(),
                     train_instance_count=1,
                     train_instance_type='ml.m5.2xlarge', #this can also be a local instance
