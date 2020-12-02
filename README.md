@@ -13,7 +13,7 @@ This pipeline uses XGBoost as a framework since we are using our own training sc
 <strong>[Sagemaker Python SDK v1]</strong>
 
 
-```
+```python
 import boto3
 import sagemaker
 from sagemaker.xgboost.estimator import XGBoost
